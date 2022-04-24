@@ -10,6 +10,7 @@ class Game {
     this.IntervalId = null;
     this.player = null;
     this.ball = null;
+    this.controls = null;
     this.frames = 0;
   }
 
@@ -20,34 +21,109 @@ class Game {
     this.controls.controlEvent();
     this.IntervalId = setInterval(() => {
       this.update();
-    }, 1000 / 60);
+    }, 15);
   }
 
   update() {
     this.ctx.clearRect(0, 0, this.width, this.height);
-    this.frames++;
-    this.drawScores();
     this.player.draw();
     this.ball.draw();
-    //this.ball.x += this.ball.vx;
-    //this.ball.y += this.ball.vy;
-    //if (
-    //this.ball.y + this.ball.vy > this.canvas.height ||
-    //this.ball.y + this.ball.vy < 0
-    //) {
-    //this.ball.vy *= -1;
-    //}
-    //if (
-    // this.ball.x + this.ball.vx > this.canvas.width ||
-    //  this.ball.x + this.ball.vx < 0
-    //) {
-    // this.ball.vx *= -1;
-    //}
+    this.frames++;
+    this.drawScores();
+    this.ball.ballVelocity();
+    //this.detectPlayer();
+    this.detectWall();
   }
 
   stop() {
     clearInterval(this.IntervalId);
   }
+
+  detectWall() {
+    if (this.ball.x < 10) {
+      this.ball.vx = -this.ball.vx;
+    }
+    if (this.ball.x > 490) {
+      this.ball.vx = -this.ball.vx;
+    }
+    if (this.ball.y < 0) {
+      this.ball.vy = -this.ball.vy;
+    }
+    const hitPlayer = () =>
+      this.ball.y + 4.1 * this.ball.radius >
+        this.canvas.height - this.player.height &&
+      this.ball.y + this.ball.radius < this.canvas.height &&
+      this.ball.x + this.ball.radius > this.player.x &&
+      this.ball.x + this.ball.radius < this.player.x + this.player.width;
+
+    if (hitPlayer()) {
+      this.ball.vy = -this.ball.vy;
+    }
+  }
+
+  // detectPlayer() {
+  //   if (
+  //     this.ball.y + 2 * this.ball.radius >
+  //     this.canvas.height - this.player.height
+  //   ) {
+  //     this.ball.vy = -this.ball.vy;
+  //   }
+  //   if (this.ball.y + this.ball.radius < this.canvas.height) {
+  //     this.ball.vy = -this.ball.vy;
+  //   }
+  //   if (this.ball.x + this.ball.radius > this.player.x) {
+  //     this.ball.vx = -this.ball.vx;
+  //   }
+  //   if (this.ball.x + this.ball.radius < this.player.x + this.player.width) {
+  //     this.ball.vx = -this.ball.vx;
+  //   }
+  // }
+
+  // detectWall() {
+  //   if (
+  //     this.ball.y + this.ball.vy > this.canvas.height ||
+  //     this.ball.y + this.ball.vy < 0
+  //   ) {
+  //     this.ball.vy *= -1;
+  //   }
+  //   if (
+  //     this.ball.x + this.ball.vx > this.canvas.width ||
+  //     this.ball.x + this.ball.vx < 0
+  //   ) {
+  //     this.ball.vx *= -1;
+  //   }
+  // }
+
+  // detectWall() {
+  //   const hitLeftWall = () => this.ball.x < 0;
+  //   const hitRightWall = () =>
+  //     this.ball.x + this.ball.radius * 1 > this.canvas.width;
+  //   const hitTopWall = () => this.ball.y < 0;
+  //   const hitPlayer = () =>
+  //     this.ball.y + 2 * this.ball.radius >
+  //       this.canvas.height - this.player.height &&
+  //     this.ball.y + this.ball.radius < this.canvas.height &&
+  //     this.ball.x + this.ball.radius > this.player.x &&
+  //     this.ball.x + this.ball.radius < this.player.x + this.player.width;
+
+  //   if (hitLeftWall()) {
+  //     this.ball.vx = -this.ball.vx;
+  //     this.ball.x = 0;
+  //   }
+  //   if (hitRightWall()) {
+  //     this.ball.vx = -this.ball.vx;
+  //     this.ball.x = this.canvas.width - 1 * this.ball.radius;
+  //   }
+  //   if (hitTopWall()) {
+  //     this.ball.vy = -this.ball.vy;
+  //     this.ball.y = 10;
+  //   }
+  //   if (hitPlayer()) {
+  //     this.ball.vy = -this.ball.vy;
+  //     this.ball.y =
+  //       this.canvas.height - this.player.height - 2 * this.ball.radius;
+  //   }
+  // }
 
   drawScores() {
     let score = Math.floor(this.frames / 60);

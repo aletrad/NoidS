@@ -8,12 +8,12 @@ class Controls {
     window.addEventListener("keydown", (e) => {
       switch (e.code) {
         case "ArrowRight":
-          if (this.player.x + this.player.width < 495) {
+          if (this.player.x + this.player.width < 490) {
             this.player.moveRight();
           }
           break;
         case "ArrowLeft":
-          if (this.player.x > 0) {
+          if (this.player.x > 10) {
             this.player.moveLeft();
           }
           break;

@@ -3,8 +3,8 @@ class Ball {
     this.game = game;
     this.x = 250;
     this.y = 552;
-    this.vx = 1;
-    this.vy = -4;
+    this.vx = 5;
+    this.vy = -7;
     this.radius = 8;
     this.color = "red";
   }
@@ -15,5 +15,10 @@ class Ball {
     this.game.ctx.closePath();
     this.game.ctx.fillStyle = this.color;
     this.game.ctx.fill();
+  }
+
+  ballVelocity() {
+    this.game.ball.x += this.game.ball.vx;
+    this.game.ball.y += this.game.ball.vy;
   }
 }
