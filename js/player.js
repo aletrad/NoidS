@@ -5,12 +5,12 @@ class Player {
     this.y = 560;
     this.width = 80;
     this.height = 15;
-    this.color = "blue";
+    this.img = new Image();
   }
 
   draw() {
-    this.game.ctx.fillStyle = this.color;
-    this.game.ctx.fillRect(this.x, this.y, this.width, this.height);
+    this.img.src = "docs/assets/imgs/56-Breakout-Tiles.png";
+    this.game.ctx.drawImage(this.img, this.x, this.y, this.width, this.height);
   }
 
   moveLeft() {

@@ -3,7 +3,7 @@ class Ball {
     this.game = game;
     this.x = 250;
     this.y = 552;
-    this.vx = 5;
+    this.vx = 3.5;
     this.vy = -7;
     this.radius = 8;
     this.color = "red";

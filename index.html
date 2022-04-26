@@ -5,21 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NoidS</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <button id="start-button">Start Game</button>
+    <div class="menu">
+      <img src="docs/assets/imgs/noids.png" alt="" class="logo-img" />
+      <br />
+      <button id="start-button">START GAME</button>
+      <p class="start">
+        Click 'START GAME' to start and use the left and right arrows on your
+        keyboard to control the paddle!
+      </p>
+      <img src="docs/assets/imgs/arrows.png" alt="" class="arrows-img" />
+    </div>
 
-    <canvas
-      width="500px"
-      height="600px"
-      style="border: 10px solid black"
-      id="canvas"
-    ></canvas>
+    <div class="canvas1">
+      <canvas
+        width="500px"
+        height="600px"
+        style="border: 10px solid black"
+        id="canvas"
+      ></canvas>
+    </div>
 
     <script src="js/enemies.js"></script>
     <script src="js/controls.js"></script>
     <script src="js/ball.js"></script>
     <script src="js/player.js"></script>
+    <script src="js/lives.js"></script>
     <script src="js/game.js"></script>
     <script src="js/start.js"></script>
   </body>
