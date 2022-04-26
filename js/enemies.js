@@ -46,13 +46,13 @@ class Enemies {
 //     }
 //   }
 
-//   class Enemy1 extends Enemies {
-//     constructor(game, x, y, width, height, color) {
-//       super(game, x, y, width, height, color);
-//     }
-
-//     draw() {
-//       this.game.ctx.fillStyle = this.color;
-//       this.game.ctx.fillRect(this.x, this.y, this.width, this.height);
-//     }
+// class Enemies1 extends Enemies {
+//   constructor(game, x, y, width, height, color) {
+//     super(game, x, y, width, height, color);
 //   }
+
+//   draw() {
+//     this.game.ctx.fillStyle = this.color;
+//     this.game.ctx.fillRect(this.x, this.y, this.width, this.height);
+//   }
+// }

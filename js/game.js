@@ -15,6 +15,7 @@ class Game {
     this.frames = 0;
     this.lives = 3;
     this.score = 0;
+    this.level = 1;
   }
 
   start() {
@@ -42,6 +43,7 @@ class Game {
     this.detectWall();
     this.enemyCollision();
     this.livesRemaining();
+    this.checkNextLevel();
     this.checkWin();
     this.gameOver();
   }
@@ -71,13 +73,30 @@ class Game {
   }
 
   multipleEnemies() {
-    this.enemies.push(new Enemies(this, 10, 30, 60, 30, "blue"));
-    this.enemies.push(new Enemies(this, 110, 110, 60, 30, "blue"));
-    this.enemies.push(new Enemies(this, 210, 130, 60, 30, "blue"));
-    this.enemies.push(new Enemies(this, 330, 150, 60, 30, "green"));
-    this.enemies.push(new Enemies(this, 450, 170, 60, 30, "blue"));
-    this.enemies.push(new Enemies(this, 200, 180, 60, 30, "green"));
-    this.enemies.push(new Enemies(this, 300, 200, 60, 30, "yellow"));
+    this.enemies.push(new Enemies(this, 10, 100, 60, 25, "blue"));
+    this.enemies.push(new Enemies(this, 80, 100, 60, 25, "green"));
+    this.enemies.push(new Enemies(this, 150, 100, 60, 25, "blue"));
+    this.enemies.push(new Enemies(this, 220, 100, 60, 25, "green"));
+    this.enemies.push(new Enemies(this, 290, 100, 60, 25, "blue"));
+    this.enemies.push(new Enemies(this, 360, 100, 60, 25, "green"));
+    this.enemies.push(new Enemies(this, 430, 100, 60, 25, "blue"));
+    this.enemies.push(new Enemies(this, 45, 150, 60, 25, "grey"));
+    this.enemies.push(new Enemies(this, 45, 150, 60, 25, "grey"));
+    this.enemies.push(new Enemies(this, 115, 150, 60, 25, "green"));
+    this.enemies.push(new Enemies(this, 185, 150, 60, 25, "blue"));
+    this.enemies.push(new Enemies(this, 255, 150, 60, 25, "green"));
+    this.enemies.push(new Enemies(this, 325, 150, 60, 25, "blue"));
+    this.enemies.push(new Enemies(this, 395, 150, 60, 25, "grey"));
+    this.enemies.push(new Enemies(this, 395, 150, 60, 25, "grey"));
+    this.enemies.push(new Enemies(this, 10, 200, 60, 25, "blue"));
+    this.enemies.push(new Enemies(this, 80, 200, 60, 25, "green"));
+    this.enemies.push(new Enemies(this, 150, 200, 60, 25, "blue"));
+    this.enemies.push(new Enemies(this, 220, 200, 60, 25, "green"));
+    this.enemies.push(new Enemies(this, 290, 200, 60, 25, "blue"));
+    this.enemies.push(new Enemies(this, 360, 200, 60, 25, "green"));
+    this.enemies.push(new Enemies(this, 430, 200, 60, 25, "blue"));
+    this.enemies.push(new Enemies(this, 200, 300, 60, 25, "grey"));
+    this.enemies.push(new Enemies(this, 200, 300, 60, 25, "grey"));
   }
 
   enemyCollision() {
@@ -90,7 +109,6 @@ class Game {
     this.enemies.forEach((enemy, i) => {
       if (ballHitsEnemy(enemy)) {
         this.ball.vy = -this.ball.vy;
-        this.ball.vx = -this.ball.vx;
         this.score += 10;
         this.enemies.splice([i], 1);
       }
@@ -115,8 +133,27 @@ class Game {
     this.player.x = 209;
   }
 
-  checkWin() {
+  checkNextLevel() {
     if (this.enemies.length === 0) {
+      this.nextLevel();
+
+      setTimeout(() => {
+        this.start();
+      }, 3000);
+    }
+  }
+
+  nextLevel() {
+    this.level += 1;
+    //this.ball.vx += 10;
+    this.ctx.font = "20px Arial";
+    this.ctx.fillStyle = "red";
+    this.ctx.fillText(`LEVEL ${this.level}!`, 100, 300);
+    clearInterval(this.IntervalId);
+  }
+
+  checkWin() {
+    if (this.level === 3) {
       this.ctx.fillStyle = "black";
       this.ctx.fillRect(0, 0, 500, 600);
       this.ctx.font = "20px Arial";
