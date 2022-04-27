@@ -9,7 +9,7 @@ class Player {
   }
 
   draw() {
-    this.img.src = "docs/assets/imgs/paddle.png";
+    this.img.src = "docs/assets/imgs/paddle2.png";
     this.game.ctx.drawImage(this.img, this.x, this.y, this.width, this.height);
   }
 

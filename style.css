@@ -7,9 +7,15 @@ body {
   font-family: "Press Start 2P", cursive;
   padding: 0;
   text-align: center;
-  background-image: url();
   background-repeat: no-repeat;
   background-size: cover;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(56, 138, 154, 1) 21%,
+    rgba(43, 43, 48, 1) 75%
+  );
 }
 
 .menu {
@@ -22,8 +28,9 @@ body {
 }
 
 .logo-img {
-  width: 350px;
-  margin-bottom: -50px;
+  width: 550px;
+  margin-bottom: -100px;
+  margin-top: -100px;
 }
 
 .arrows-img {
@@ -35,19 +42,19 @@ body {
 }
 
 body button {
-  font-size: 20px;
+  font-size: 15px;
   background-color: #1a1818;
   color: #fff;
-  padding: 20px 40px;
+  padding: 15px 30px;
   border-radius: 5px;
   margin-bottom: 20px;
+  margin-top: -150px;
   font-family: "Press Start 2P", cursive;
 }
 
 .canvas1 {
   float: left;
   padding: 20px 0px;
-  background-image: url("");
   background-size: cover;
   width: 500px;
   height: 600px;
