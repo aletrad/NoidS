@@ -9,7 +9,7 @@ class Player {
   }
 
   draw() {
-    this.img.src = "docs/assets/imgs/56-Breakout-Tiles.png";
+    this.img.src = "docs/assets/imgs/paddle.png";
     this.game.ctx.drawImage(this.img, this.x, this.y, this.width, this.height);
   }
 

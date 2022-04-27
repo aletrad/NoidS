@@ -2,7 +2,7 @@ class Game {
   constructor() {
     this.canvas = document.getElementById("canvas");
     this.ctx = this.canvas.getContext("2d");
-    //this.background = new Image();
+    this.background = new Image();
     this.x = 0;
     this.y = 0;
     this.width = 500;
@@ -31,14 +31,16 @@ class Game {
 
   update() {
     this.ctx.clearRect(0, 0, this.width, this.height);
+    this.frames++;
+    this.drawBackground();
     this.player.draw();
     this.enemies.forEach((enemy) => {
       enemy.draw();
     });
     this.ball.draw();
-    this.frames++;
     this.drawScores();
     this.drawLives();
+    this.drawLevel();
     this.ball.ballVelocity();
     this.detectWall();
     this.enemyCollision();
@@ -46,6 +48,17 @@ class Game {
     this.checkNextLevel();
     this.checkWin();
     this.gameOver();
+  }
+
+  drawBackground() {
+    this.background.src = "docs/assets/imgs/space.jpeg";
+    this.ctx.drawImage(
+      this.background,
+      this.x,
+      this.y,
+      this.width,
+      this.height
+    );
   }
 
   detectWall() {
@@ -116,15 +129,21 @@ class Game {
   }
 
   drawScores() {
-    this.ctx.font = "32px serif";
-    this.ctx.fillStyle = "black";
-    this.ctx.fillText(`Score: ${this.score}`, 100, 30);
+    this.ctx.font = "13px 'Press Start 2P', cursive";
+    this.ctx.fillStyle = "white";
+    this.ctx.fillText(`Score: ${this.score}`, 50, 30);
   }
 
   drawLives() {
-    this.ctx.font = "32px serif";
-    this.ctx.fillStyle = "black";
-    this.ctx.fillText(`Lives: ${this.lives}`, 300, 30);
+    this.ctx.font = "13px 'Press Start 2P', cursive";
+    this.ctx.fillStyle = "white";
+    this.ctx.fillText(`Lives: ${this.lives}`, 200, 30);
+  }
+
+  drawLevel() {
+    this.ctx.font = "13px 'Press Start 2P', cursive";
+    this.ctx.fillStyle = "white";
+    this.ctx.fillText(`Level: ${this.level}`, 350, 30);
   }
 
   resetBallPaddle() {
@@ -145,33 +164,48 @@ class Game {
 
   nextLevel() {
     this.level += 1;
-    //this.ball.vx += 10;
-    this.ctx.font = "20px Arial";
-    this.ctx.fillStyle = "red";
-    this.ctx.fillText(`LEVEL ${this.level}!`, 100, 300);
+    this.ball.vx *= 5;
+    console.log(this.ball.vx);
+    this.ctx.font = "20px 'Press Start 2P', cursive";
+    this.ctx.fillStyle = "white";
+    this.ctx.fillText(`Get ready for level ${this.level}!`, 35, 300);
     clearInterval(this.IntervalId);
   }
 
   checkWin() {
     if (this.level === 3) {
-      this.ctx.fillStyle = "black";
-      this.ctx.fillRect(0, 0, 500, 600);
-      this.ctx.font = "20px Arial";
-      this.ctx.fillStyle = "red";
-      this.ctx.fillText("YOU WON!", 200, 100);
-      this.ctx.fillText("CLICK 'Start Game' TO PLAY AGAIN", 100, 300);
+      this.background.src = "docs/assets/imgs/space.jpeg";
+      this.ctx.drawImage(
+        this.background,
+        this.x,
+        this.y,
+        this.width,
+        this.height
+      );
+      this.ctx.font = "20px 'Press Start 2P', cursive";
+      this.ctx.fillStyle = "white";
+      this.ctx.fillText("YOU WON!!!", 150, 150);
+      this.ctx.fillText("CLICK 'START GAME'", 75, 300);
+      this.ctx.fillText("TO PLAY AGAIN", 120, 350);
       clearInterval(this.IntervalId);
     }
   }
 
   gameOver() {
     if (this.ball.y > this.canvas.height) {
-      this.ctx.fillStyle = "black";
-      this.ctx.fillRect(0, 0, 500, 600);
-      this.ctx.font = "20px Arial";
-      this.ctx.fillStyle = "red";
-      this.ctx.fillText("GAME OVER", 200, 100);
-      this.ctx.fillText("CLICK 'Start Game' TO PLAY AGAIN", 100, 300);
+      this.background.src = "docs/assets/imgs/space.jpeg";
+      this.ctx.drawImage(
+        this.background,
+        this.x,
+        this.y,
+        this.width,
+        this.height
+      );
+      this.ctx.font = "20px 'Press Start 2P', cursive";
+      this.ctx.fillStyle = "white";
+      this.ctx.fillText("YOU LOST", 165, 150);
+      this.ctx.fillText("CLICK 'START GAME'", 75, 300);
+      this.ctx.fillText("TO PLAY AGAIN", 120, 350);
       clearInterval(this.IntervalId);
     }
   }

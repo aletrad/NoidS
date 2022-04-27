@@ -6,15 +6,21 @@ class Ball {
     this.vx = 3.5;
     this.vy = -7;
     this.radius = 8;
-    this.color = "red";
+    this.img = new Image();
   }
 
   draw() {
-    this.game.ctx.beginPath();
-    this.game.ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
-    this.game.ctx.closePath();
-    this.game.ctx.fillStyle = this.color;
-    this.game.ctx.fill();
+    // this.game.ctx.beginPath();
+    // this.game.ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
+    // this.game.ctx.closePath();
+    this.img.src = "docs/assets/imgs/ball.png";
+    this.game.ctx.drawImage(
+      this.img,
+      this.x,
+      this.y,
+      2 * this.radius,
+      2 * this.radius
+    );
   }
 
   ballVelocity() {

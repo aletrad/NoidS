@@ -25,7 +25,7 @@ class Enemies {
 //   }
 
 //   draw() {
-//     this.img.src = "docs/assets/imgs/01-Breakout-Tiles.png";
+//     this.img.src = "docs/assets/imgs/56-Breakout-Tiles.png";
 //     this.game.ctx.drawImage(this.x, this.y, this.width, this.height);
 //   }
 // }

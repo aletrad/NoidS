@@ -1,6 +1,15 @@
+@font-face {
+  font-family: "Press Start 2P", cursive;
+  src: url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+}
+
 body {
+  font-family: "Press Start 2P", cursive;
   padding: 0;
   text-align: center;
+  background-image: url();
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .menu {
@@ -10,7 +19,6 @@ body {
 
 .menu p {
   font-size: 18px;
-  font-family: "Verdana";
 }
 
 .logo-img {
@@ -27,15 +35,20 @@ body {
 }
 
 body button {
-  font-size: 30px;
+  font-size: 20px;
   background-color: #1a1818;
   color: #fff;
   padding: 20px 40px;
   border-radius: 5px;
   margin-bottom: 20px;
+  font-family: "Press Start 2P", cursive;
 }
 
 .canvas1 {
   float: left;
   padding: 20px 0px;
+  background-image: url("");
+  background-size: cover;
+  width: 500px;
+  height: 600px;
 }
