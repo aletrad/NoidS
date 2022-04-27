@@ -137,7 +137,7 @@ class Game {
   drawLives() {
     this.ctx.font = "13px 'Press Start 2P', cursive";
     this.ctx.fillStyle = "white";
-    this.ctx.fillText(`Lives: ${this.lives}`, 200, 30);
+    this.ctx.fillText(`Lives: ${this.lives}`, 210, 30);
   }
 
   drawLevel() {
