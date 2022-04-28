@@ -17,7 +17,7 @@ class Game {
     this.score = 0;
     this.level = 1;
     this.isRunning = false;
-    this.playerSound = new Audio("docs/assets/sounds/paddle.mp3");
+    //this.playerSound = new Audio("docs/assets/sounds/paddle.mp3");
   }
 
   start() {
@@ -425,7 +425,7 @@ class Game {
 
     this.enemies.forEach((enemy, i) => {
       if (ballHitsEnemy(enemy)) {
-        this.playerSound.play();
+        //this.playerSound.play();
         this.ball.vy = -this.ball.vy;
         this.score += 10;
         this.enemies.splice([i], 1);
