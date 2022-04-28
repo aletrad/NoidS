@@ -17,7 +17,7 @@ class Game {
     this.score = 0;
     this.level = 1;
     this.isRunning = false;
-    this.playerSound = new Audio("docs/assets/sounds/nutfall.flac");
+    //this.playerSound = new Audio("docs/assets/sounds/nutfall.flac");
     this.over = new Audio("docs/assets/sounds/horror.wav");
     this.death = new Audio("docs/assets/sounds/death.wav");
     this.round = new Audio("docs/assets/sounds/round.wav");
@@ -292,8 +292,8 @@ class Game {
 
     this.enemies.forEach((enemy, i) => {
       if (ballHitsEnemy(enemy)) {
-        this.playerSound.currentTime = 0;
-        this.playerSound.play();
+        // this.playerSound.currentTime = 0;
+        // this.playerSound.play();
         this.ball.vy = -this.ball.vy;
         this.score += 10;
         this.enemies.splice([i], 1);
