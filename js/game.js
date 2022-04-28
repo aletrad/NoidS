@@ -21,7 +21,7 @@ class Game {
     this.over = new Audio("docs/assets/sounds/horror.wav");
     this.death = new Audio("docs/assets/sounds/death.wav");
     this.round = new Audio("docs/assets/sounds/round.wav");
-    this.win = new Audio("docs/assets/sounds/win.ogg");
+    //this.win = new Audio("docs/assets/sounds/win.ogg");
   }
 
   start() {
