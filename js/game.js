@@ -114,173 +114,173 @@ class Game {
   }
 
   multipleEnemies() {
-    // this.enemies.push(new Enemies(this, 10, 100, 60, 25, "blue"));
-    // this.enemies.push(new Enemies(this, 80, 100, 60, 25, "green"));
-    // this.enemies.push(new Enemies(this, 150, 100, 60, 25, "blue"));
-    // this.enemies.push(new Enemies(this, 220, 100, 60, 25, "green"));
-    // this.enemies.push(new Enemies(this, 290, 100, 60, 25, "blue"));
-    // this.enemies.push(new Enemies(this, 360, 100, 60, 25, "green"));
-    // this.enemies.push(new Enemies(this, 430, 100, 60, 25, "blue"));
+    this.enemies.push(new Enemies(this, 10, 100, 60, 25, "blue"));
+    this.enemies.push(new Enemies(this, 80, 100, 60, 25, "green"));
+    this.enemies.push(new Enemies(this, 150, 100, 60, 25, "blue"));
+    this.enemies.push(new Enemies(this, 220, 100, 60, 25, "green"));
+    this.enemies.push(new Enemies(this, 290, 100, 60, 25, "blue"));
+    this.enemies.push(new Enemies(this, 360, 100, 60, 25, "green"));
+    this.enemies.push(new Enemies(this, 430, 100, 60, 25, "blue"));
 
-    // this.enemies.push(new Enemies(this, 45, 150, 60, 25, "gray"));
-    // this.enemies.push(new Enemies(this, 45, 150, 60, 25, "gray"));
-    // this.enemies.push(new Enemies(this, 115, 150, 60, 25, "green"));
-    // this.enemies.push(new Enemies(this, 185, 150, 60, 25, "blue"));
-    // this.enemies.push(new Enemies(this, 255, 150, 60, 25, "green"));
-    // this.enemies.push(new Enemies(this, 325, 150, 60, 25, "blue"));
-    // this.enemies.push(new Enemies(this, 395, 150, 60, 25, "gray"));
-    // this.enemies.push(new Enemies(this, 395, 150, 60, 25, "gray"));
+    this.enemies.push(new Enemies(this, 45, 150, 60, 25, "gray"));
+    this.enemies.push(new Enemies(this, 45, 150, 60, 25, "gray"));
+    this.enemies.push(new Enemies(this, 115, 150, 60, 25, "green"));
+    this.enemies.push(new Enemies(this, 185, 150, 60, 25, "blue"));
+    this.enemies.push(new Enemies(this, 255, 150, 60, 25, "green"));
+    this.enemies.push(new Enemies(this, 325, 150, 60, 25, "blue"));
+    this.enemies.push(new Enemies(this, 395, 150, 60, 25, "gray"));
+    this.enemies.push(new Enemies(this, 395, 150, 60, 25, "gray"));
 
-    // this.enemies.push(new Enemies(this, 10, 200, 60, 25, "blue"));
-    // this.enemies.push(new Enemies(this, 80, 200, 60, 25, "green"));
-    // this.enemies.push(new Enemies(this, 150, 200, 60, 25, "blue"));
-    // this.enemies.push(new Enemies(this, 220, 200, 60, 25, "green"));
-    // this.enemies.push(new Enemies(this, 290, 200, 60, 25, "blue"));
-    // this.enemies.push(new Enemies(this, 360, 200, 60, 25, "green"));
-    // this.enemies.push(new Enemies(this, 430, 200, 60, 25, "blue"));
+    this.enemies.push(new Enemies(this, 10, 200, 60, 25, "blue"));
+    this.enemies.push(new Enemies(this, 80, 200, 60, 25, "green"));
+    this.enemies.push(new Enemies(this, 150, 200, 60, 25, "blue"));
+    this.enemies.push(new Enemies(this, 220, 200, 60, 25, "green"));
+    this.enemies.push(new Enemies(this, 290, 200, 60, 25, "blue"));
+    this.enemies.push(new Enemies(this, 360, 200, 60, 25, "green"));
+    this.enemies.push(new Enemies(this, 430, 200, 60, 25, "blue"));
 
-    // this.enemies.push(new Enemies(this, 45, 250, 60, 25, "gray"));
-    // this.enemies.push(new Enemies(this, 45, 250, 60, 25, "gray"));
-    // this.enemies.push(new Enemies(this, 115, 250, 60, 25, "green"));
-    // this.enemies.push(new Enemies(this, 185, 250, 60, 25, "blue"));
-    // this.enemies.push(new Enemies(this, 255, 250, 60, 25, "green"));
+    this.enemies.push(new Enemies(this, 45, 250, 60, 25, "gray"));
+    this.enemies.push(new Enemies(this, 45, 250, 60, 25, "gray"));
+    this.enemies.push(new Enemies(this, 115, 250, 60, 25, "green"));
+    this.enemies.push(new Enemies(this, 185, 250, 60, 25, "blue"));
+    this.enemies.push(new Enemies(this, 255, 250, 60, 25, "green"));
     this.enemies.push(new Enemies(this, 325, 250, 60, 25, "blue"));
-    // this.enemies.push(new Enemies(this, 395, 250, 60, 25, "gray"));
-    // this.enemies.push(new Enemies(this, 395, 250, 60, 25, "gray"));
+    this.enemies.push(new Enemies(this, 395, 250, 60, 25, "gray"));
+    this.enemies.push(new Enemies(this, 395, 250, 60, 25, "gray"));
 
-    // this.enemies.push(new Enemies(this, 150, 350, 60, 25, "gray"));
-    // this.enemies.push(new Enemies(this, 150, 350, 60, 25, "gray"));
-    // this.enemies.push(new Enemies(this, 250, 350, 60, 25, "gray"));
-    // this.enemies.push(new Enemies(this, 250, 350, 60, 25, "gray"));
+    this.enemies.push(new Enemies(this, 150, 350, 60, 25, "gray"));
+    this.enemies.push(new Enemies(this, 150, 350, 60, 25, "gray"));
+    this.enemies.push(new Enemies(this, 250, 350, 60, 25, "gray"));
+    this.enemies.push(new Enemies(this, 250, 350, 60, 25, "gray"));
   }
 
   multipleEnemies2() {
-    // this.enemies.push(new Enemies(this, 10, 50, 60, 25, "yellow"));
-    // this.enemies.push(new Enemies(this, 10, 100, 60, 25, "yellow"));
-    // this.enemies.push(new Enemies(this, 10, 150, 60, 25, "yellow"));
-    // this.enemies.push(new Enemies(this, 10, 200, 60, 25, "yellow"));
-    // this.enemies.push(new Enemies(this, 10, 250, 60, 25, "yellow"));
+    this.enemies.push(new Enemies(this, 10, 50, 60, 25, "yellow"));
+    this.enemies.push(new Enemies(this, 10, 100, 60, 25, "yellow"));
+    this.enemies.push(new Enemies(this, 10, 150, 60, 25, "yellow"));
+    this.enemies.push(new Enemies(this, 10, 200, 60, 25, "yellow"));
+    this.enemies.push(new Enemies(this, 10, 250, 60, 25, "yellow"));
 
-    // this.enemies.push(new Enemies(this, 80, 100, 60, 25, "red"));
-    // this.enemies.push(new Enemies(this, 80, 150, 60, 25, "red"));
-    // this.enemies.push(new Enemies(this, 80, 200, 60, 25, "red"));
-    // this.enemies.push(new Enemies(this, 80, 250, 60, 25, "red"));
+    this.enemies.push(new Enemies(this, 80, 100, 60, 25, "red"));
+    this.enemies.push(new Enemies(this, 80, 150, 60, 25, "red"));
+    this.enemies.push(new Enemies(this, 80, 200, 60, 25, "red"));
+    this.enemies.push(new Enemies(this, 80, 250, 60, 25, "red"));
 
-    // this.enemies.push(new Enemies(this, 150, 150, 60, 25, "yellow"));
-    // this.enemies.push(new Enemies(this, 150, 200, 60, 25, "yellow"));
-    // this.enemies.push(new Enemies(this, 150, 250, 60, 25, "yellow"));
+    this.enemies.push(new Enemies(this, 150, 150, 60, 25, "yellow"));
+    this.enemies.push(new Enemies(this, 150, 200, 60, 25, "yellow"));
+    this.enemies.push(new Enemies(this, 150, 250, 60, 25, "yellow"));
 
-    // this.enemies.push(new Enemies(this, 220, 200, 60, 25, "red"));
-    // this.enemies.push(new Enemies(this, 220, 250, 60, 25, "red"));
+    this.enemies.push(new Enemies(this, 220, 200, 60, 25, "red"));
+    this.enemies.push(new Enemies(this, 220, 250, 60, 25, "red"));
 
-    // this.enemies.push(new Enemies(this, 290, 250, 60, 25, "yellow"));
+    this.enemies.push(new Enemies(this, 290, 250, 60, 25, "yellow"));
 
-    // this.enemies.push(new Enemies(this, 10, 300, 60, 25, "red"));
-    // this.enemies.push(new Enemies(this, 80, 300, 60, 25, "red"));
-    // this.enemies.push(new Enemies(this, 150, 300, 60, 25, "red"));
-    // this.enemies.push(new Enemies(this, 220, 300, 60, 25, "red"));
-    // this.enemies.push(new Enemies(this, 290, 300, 60, 25, "red"));
+    this.enemies.push(new Enemies(this, 10, 300, 60, 25, "red"));
+    this.enemies.push(new Enemies(this, 80, 300, 60, 25, "red"));
+    this.enemies.push(new Enemies(this, 150, 300, 60, 25, "red"));
+    this.enemies.push(new Enemies(this, 220, 300, 60, 25, "red"));
+    this.enemies.push(new Enemies(this, 290, 300, 60, 25, "red"));
     this.enemies.push(new Enemies(this, 360, 300, 60, 25, "red"));
-    //this.enemies.push(new Enemies(this, 430, 300, 60, 25, "red"));
+    this.enemies.push(new Enemies(this, 430, 300, 60, 25, "red"));
   }
 
   multipleEnemies3() {
-    // this.enemies.push(new Enemies(this, 10, 50, 60, 25, "gray"));
-    // this.enemies.push(new Enemies(this, 10, 50, 60, 25, "gray"));
-    // this.enemies.push(new Enemies(this, 430, 50, 60, 25, "gray"));
-    // this.enemies.push(new Enemies(this, 430, 50, 60, 25, "gray"));
+    this.enemies.push(new Enemies(this, 10, 50, 60, 25, "gray"));
+    this.enemies.push(new Enemies(this, 10, 50, 60, 25, "gray"));
+    this.enemies.push(new Enemies(this, 430, 50, 60, 25, "gray"));
+    this.enemies.push(new Enemies(this, 430, 50, 60, 25, "gray"));
 
-    // this.enemies.push(new Enemies(this, 80, 100, 60, 25, "gray"));
-    // this.enemies.push(new Enemies(this, 80, 100, 60, 25, "gray"));
-    // this.enemies.push(new Enemies(this, 360, 100, 60, 25, "gray"));
-    // this.enemies.push(new Enemies(this, 360, 100, 60, 25, "gray"));
+    this.enemies.push(new Enemies(this, 80, 100, 60, 25, "gray"));
+    this.enemies.push(new Enemies(this, 80, 100, 60, 25, "gray"));
+    this.enemies.push(new Enemies(this, 360, 100, 60, 25, "gray"));
+    this.enemies.push(new Enemies(this, 360, 100, 60, 25, "gray"));
 
-    // this.enemies.push(new Enemies(this, 150, 150, 60, 25, "gray"));
-    // this.enemies.push(new Enemies(this, 150, 150, 60, 25, "gray"));
-    // this.enemies.push(new Enemies(this, 290, 150, 60, 25, "gray"));
-    // this.enemies.push(new Enemies(this, 290, 150, 60, 25, "gray"));
+    this.enemies.push(new Enemies(this, 150, 150, 60, 25, "gray"));
+    this.enemies.push(new Enemies(this, 150, 150, 60, 25, "gray"));
+    this.enemies.push(new Enemies(this, 290, 150, 60, 25, "gray"));
+    this.enemies.push(new Enemies(this, 290, 150, 60, 25, "gray"));
 
-    // this.enemies.push(new Enemies(this, 220, 200, 60, 25, "red"));
+    this.enemies.push(new Enemies(this, 220, 200, 60, 25, "red"));
 
-    // this.enemies.push(new Enemies(this, 290, 250, 60, 25, "gray"));
-    // this.enemies.push(new Enemies(this, 290, 250, 60, 25, "gray"));
-    // this.enemies.push(new Enemies(this, 150, 250, 60, 25, "gray"));
-    // this.enemies.push(new Enemies(this, 150, 250, 60, 25, "gray"));
+    this.enemies.push(new Enemies(this, 290, 250, 60, 25, "gray"));
+    this.enemies.push(new Enemies(this, 290, 250, 60, 25, "gray"));
+    this.enemies.push(new Enemies(this, 150, 250, 60, 25, "gray"));
+    this.enemies.push(new Enemies(this, 150, 250, 60, 25, "gray"));
 
-    // this.enemies.push(new Enemies(this, 360, 300, 60, 25, "gray"));
-    // this.enemies.push(new Enemies(this, 360, 300, 60, 25, "gray"));
-    // this.enemies.push(new Enemies(this, 80, 300, 60, 25, "gray"));
+    this.enemies.push(new Enemies(this, 360, 300, 60, 25, "gray"));
+    this.enemies.push(new Enemies(this, 360, 300, 60, 25, "gray"));
+    this.enemies.push(new Enemies(this, 80, 300, 60, 25, "gray"));
     this.enemies.push(new Enemies(this, 80, 300, 60, 25, "gray"));
 
-    // this.enemies.push(new Enemies(this, 430, 350, 60, 25, "gray"));
-    // this.enemies.push(new Enemies(this, 430, 350, 60, 25, "gray"));
-    // this.enemies.push(new Enemies(this, 10, 350, 60, 25, "gray"));
-    //this.enemies.push(new Enemies(this, 10, 350, 60, 25, "gray"));
+    this.enemies.push(new Enemies(this, 430, 350, 60, 25, "gray"));
+    this.enemies.push(new Enemies(this, 430, 350, 60, 25, "gray"));
+    this.enemies.push(new Enemies(this, 10, 350, 60, 25, "gray"));
+    this.enemies.push(new Enemies(this, 10, 350, 60, 25, "gray"));
   }
 
   multipleEnemies4() {
-    // this.enemies.push(new Enemies(this, 10, 100, 60, 25, "purple"));
-    // this.enemies.push(new Enemies(this, 80, 100, 60, 25, "purple"));
-    // this.enemies.push(new Enemies(this, 10, 150, 60, 25, "purple"));
-    // this.enemies.push(new Enemies(this, 80, 150, 60, 25, "purple"));
+    this.enemies.push(new Enemies(this, 10, 100, 60, 25, "purple"));
+    this.enemies.push(new Enemies(this, 80, 100, 60, 25, "purple"));
+    this.enemies.push(new Enemies(this, 10, 150, 60, 25, "purple"));
+    this.enemies.push(new Enemies(this, 80, 150, 60, 25, "purple"));
 
-    // this.enemies.push(new Enemies(this, 10, 250, 60, 25, "red"));
-    // this.enemies.push(new Enemies(this, 80, 250, 60, 25, "red"));
-    // this.enemies.push(new Enemies(this, 10, 300, 60, 25, "red"));
-    // this.enemies.push(new Enemies(this, 80, 300, 60, 25, "red"));
+    this.enemies.push(new Enemies(this, 10, 250, 60, 25, "red"));
+    this.enemies.push(new Enemies(this, 80, 250, 60, 25, "red"));
+    this.enemies.push(new Enemies(this, 10, 300, 60, 25, "red"));
+    this.enemies.push(new Enemies(this, 80, 300, 60, 25, "red"));
 
-    // this.enemies.push(new Enemies(this, 430, 100, 60, 25, "pink"));
-    // this.enemies.push(new Enemies(this, 360, 100, 60, 25, "pink"));
-    // this.enemies.push(new Enemies(this, 430, 150, 60, 25, "pink"));
-    // this.enemies.push(new Enemies(this, 360, 150, 60, 25, "pink"));
+    this.enemies.push(new Enemies(this, 430, 100, 60, 25, "pink"));
+    this.enemies.push(new Enemies(this, 360, 100, 60, 25, "pink"));
+    this.enemies.push(new Enemies(this, 430, 150, 60, 25, "pink"));
+    this.enemies.push(new Enemies(this, 360, 150, 60, 25, "pink"));
 
-    // this.enemies.push(new Enemies(this, 430, 250, 60, 25, "orange"));
-    // this.enemies.push(new Enemies(this, 360, 250, 60, 25, "orange"));
-    // this.enemies.push(new Enemies(this, 430, 300, 60, 25, "orange"));
+    this.enemies.push(new Enemies(this, 430, 250, 60, 25, "orange"));
+    this.enemies.push(new Enemies(this, 360, 250, 60, 25, "orange"));
+    this.enemies.push(new Enemies(this, 430, 300, 60, 25, "orange"));
     this.enemies.push(new Enemies(this, 360, 300, 60, 25, "orange"));
 
-    // this.enemies.push(new Enemies(this, 220, 100, 60, 25, "gray"));
-    // this.enemies.push(new Enemies(this, 220, 100, 60, 25, "gray"));
-    // this.enemies.push(new Enemies(this, 220, 150, 60, 25, "gray"));
-    // this.enemies.push(new Enemies(this, 220, 150, 60, 25, "gray"));
-    // this.enemies.push(new Enemies(this, 220, 200, 60, 25, "gray"));
-    // this.enemies.push(new Enemies(this, 220, 200, 60, 25, "gray"));
-    // this.enemies.push(new Enemies(this, 220, 250, 60, 25, "gray"));
-    // this.enemies.push(new Enemies(this, 220, 250, 60, 25, "gray"));
-    // this.enemies.push(new Enemies(this, 220, 300, 60, 25, "gray"));
-    // this.enemies.push(new Enemies(this, 220, 300, 60, 25, "gray"));
+    this.enemies.push(new Enemies(this, 220, 100, 60, 25, "gray"));
+    this.enemies.push(new Enemies(this, 220, 100, 60, 25, "gray"));
+    this.enemies.push(new Enemies(this, 220, 150, 60, 25, "gray"));
+    this.enemies.push(new Enemies(this, 220, 150, 60, 25, "gray"));
+    this.enemies.push(new Enemies(this, 220, 200, 60, 25, "gray"));
+    this.enemies.push(new Enemies(this, 220, 200, 60, 25, "gray"));
+    this.enemies.push(new Enemies(this, 220, 250, 60, 25, "gray"));
+    this.enemies.push(new Enemies(this, 220, 250, 60, 25, "gray"));
+    this.enemies.push(new Enemies(this, 220, 300, 60, 25, "gray"));
+    this.enemies.push(new Enemies(this, 220, 300, 60, 25, "gray"));
   }
 
   multipleEnemies5() {
-    // this.enemies.push(new Enemies(this, 10, 80, 60, 25, "blue"));
-    // this.enemies.push(new Enemies(this, 100, 115, 60, 25, "green"));
-    // this.enemies.push(new Enemies(this, 10, 150, 60, 25, "blue"));
-    // this.enemies.push(new Enemies(this, 100, 185, 60, 25, "green"));
-    // this.enemies.push(new Enemies(this, 10, 220, 60, 25, "blue"));
-    // this.enemies.push(new Enemies(this, 100, 255, 60, 25, "green"));
-    // this.enemies.push(new Enemies(this, 10, 290, 60, 25, "blue"));
-    // this.enemies.push(new Enemies(this, 100, 325, 60, 25, "green"));
-    // this.enemies.push(new Enemies(this, 10, 360, 60, 25, "blue"));
+    this.enemies.push(new Enemies(this, 10, 80, 60, 25, "blue"));
+    this.enemies.push(new Enemies(this, 100, 115, 60, 25, "green"));
+    this.enemies.push(new Enemies(this, 10, 150, 60, 25, "blue"));
+    this.enemies.push(new Enemies(this, 100, 185, 60, 25, "green"));
+    this.enemies.push(new Enemies(this, 10, 220, 60, 25, "blue"));
+    this.enemies.push(new Enemies(this, 100, 255, 60, 25, "green"));
+    this.enemies.push(new Enemies(this, 10, 290, 60, 25, "blue"));
+    this.enemies.push(new Enemies(this, 100, 325, 60, 25, "green"));
+    this.enemies.push(new Enemies(this, 10, 360, 60, 25, "blue"));
 
-    // this.enemies.push(new Enemies(this, 190, 80, 60, 25, "red"));
-    // this.enemies.push(new Enemies(this, 250, 115, 60, 25, "yellow"));
-    // this.enemies.push(new Enemies(this, 190, 150, 60, 25, "red"));
-    // this.enemies.push(new Enemies(this, 250, 185, 60, 25, "yellow"));
-    // this.enemies.push(new Enemies(this, 190, 220, 60, 25, "red"));
-    // this.enemies.push(new Enemies(this, 250, 255, 60, 25, "yellow"));
-    // this.enemies.push(new Enemies(this, 190, 290, 60, 25, "red"));
-    // this.enemies.push(new Enemies(this, 250, 325, 60, 25, "yellow"));
-    // this.enemies.push(new Enemies(this, 190, 360, 60, 25, "red"));
+    this.enemies.push(new Enemies(this, 190, 80, 60, 25, "red"));
+    this.enemies.push(new Enemies(this, 250, 115, 60, 25, "yellow"));
+    this.enemies.push(new Enemies(this, 190, 150, 60, 25, "red"));
+    this.enemies.push(new Enemies(this, 250, 185, 60, 25, "yellow"));
+    this.enemies.push(new Enemies(this, 190, 220, 60, 25, "red"));
+    this.enemies.push(new Enemies(this, 250, 255, 60, 25, "yellow"));
+    this.enemies.push(new Enemies(this, 190, 290, 60, 25, "red"));
+    this.enemies.push(new Enemies(this, 250, 325, 60, 25, "yellow"));
+    this.enemies.push(new Enemies(this, 190, 360, 60, 25, "red"));
 
     this.enemies.push(new Enemies(this, 430, 80, 60, 25, "blue"));
     this.enemies.push(new Enemies(this, 340, 115, 60, 25, "green"));
-    // this.enemies.push(new Enemies(this, 430, 150, 60, 25, "blue"));
-    // this.enemies.push(new Enemies(this, 340, 185, 60, 25, "green"));
-    // this.enemies.push(new Enemies(this, 430, 220, 60, 25, "blue"));
-    // this.enemies.push(new Enemies(this, 340, 255, 60, 25, "green"));
-    // this.enemies.push(new Enemies(this, 430, 290, 60, 25, "blue"));
-    // this.enemies.push(new Enemies(this, 340, 325, 60, 25, "green"));
-    // this.enemies.push(new Enemies(this, 430, 360, 60, 25, "blue"));
+    this.enemies.push(new Enemies(this, 430, 150, 60, 25, "blue"));
+    this.enemies.push(new Enemies(this, 340, 185, 60, 25, "green"));
+    this.enemies.push(new Enemies(this, 430, 220, 60, 25, "blue"));
+    this.enemies.push(new Enemies(this, 340, 255, 60, 25, "green"));
+    this.enemies.push(new Enemies(this, 430, 290, 60, 25, "blue"));
+    this.enemies.push(new Enemies(this, 340, 325, 60, 25, "green"));
+    this.enemies.push(new Enemies(this, 430, 360, 60, 25, "blue"));
   }
 
   enemyCollision() {
