@@ -17,7 +17,7 @@ class Game {
     this.score = 0;
     this.level = 1;
     this.isRunning = false;
-    this.playerSound = new Audio("./docs/assets/sounds/paddle.mp3");
+    this.playerSound = new Audio("docs/assets/sounds/paddle.mp3");
   }
 
   start() {
