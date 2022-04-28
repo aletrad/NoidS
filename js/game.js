@@ -17,6 +17,7 @@ class Game {
     this.score = 0;
     this.level = 1;
     this.isRunning = false;
+    this.playerSound = new Audio("./docs/assets/sounds/paddle.mp3");
   }
 
   start() {
@@ -35,8 +36,25 @@ class Game {
       this.multipleEnemies();
     } else if (this.level === 2) {
       this.multipleEnemies2();
+    } else if (this.level === 3) {
+      this.multipleEnemies3();
+    } else if (this.level === 4) {
+      this.multipleEnemies4();
     }
-    if (this.level === 3) {
+    // } else if (this.level === 5) {
+    //   this.multipleEnemies5();
+    // } else if (this.level === 6) {
+    //   this.multipleEnemies6();
+    // } else if (this.level === 7) {
+    //   this.multipleEnemies6();
+    // } else if (this.level === 8) {
+    //   this.multipleEnemies6();
+    // } else if (this.level === 9) {
+    //   this.multipleEnemies6();
+    // } else if (this.level === 10) {
+    //   this.multipleEnemies6();
+    // }
+    if (this.level === 5) {
       this.checkWin();
     }
     setTimeout(() => {
@@ -103,40 +121,44 @@ class Game {
   }
 
   multipleEnemies() {
-    // this.enemies.push(new Enemies(this, 10, 100, 60, 25, "SteelBlue"));
-    // this.enemies.push(new Enemies(this, 80, 100, 60, 25, "DarkCyan"));
-    // this.enemies.push(new Enemies(this, 150, 100, 60, 25, "SteelBlue"));
-    // this.enemies.push(new Enemies(this, 220, 100, 60, 25, "DarkCyan"));
-    // this.enemies.push(new Enemies(this, 290, 100, 60, 25, "SteelBlue"));
-    // this.enemies.push(new Enemies(this, 360, 100, 60, 25, "DarkCyan"));
-    // this.enemies.push(new Enemies(this, 430, 100, 60, 25, "SteelBlue"));
-    // this.enemies.push(new Enemies(this, 45, 150, 60, 25, "SlateGray"));
-    // this.enemies.push(new Enemies(this, 45, 150, 60, 25, "SlateGray"));
-    // this.enemies.push(new Enemies(this, 115, 150, 60, 25, "DarkCyan"));
-    // this.enemies.push(new Enemies(this, 185, 150, 60, 25, "SteelBlue"));
-    // this.enemies.push(new Enemies(this, 255, 150, 60, 25, "DarkCyan"));
-    // this.enemies.push(new Enemies(this, 325, 150, 60, 25, "SteelBlue"));
-    // this.enemies.push(new Enemies(this, 395, 150, 60, 25, "SlateGray"));
-    // this.enemies.push(new Enemies(this, 395, 150, 60, 25, "SlateGray"));
-    // this.enemies.push(new Enemies(this, 10, 200, 60, 25, "SteelBlue"));
-    // this.enemies.push(new Enemies(this, 80, 200, 60, 25, "DarkCyan"));
-    // this.enemies.push(new Enemies(this, 150, 200, 60, 25, "SteelBlue"));
-    // this.enemies.push(new Enemies(this, 220, 200, 60, 25, "DarkCyan"));
-    // this.enemies.push(new Enemies(this, 290, 200, 60, 25, "SteelBlue"));
-    // this.enemies.push(new Enemies(this, 360, 200, 60, 25, "DarkCyan"));
-    // this.enemies.push(new Enemies(this, 430, 200, 60, 25, "SteelBlue"));
-    // this.enemies.push(new Enemies(this, 45, 250, 60, 25, "SlateGray"));
-    // this.enemies.push(new Enemies(this, 45, 250, 60, 25, "SlateGray"));
-    // this.enemies.push(new Enemies(this, 115, 250, 60, 25, "DarkCyan"));
-    // this.enemies.push(new Enemies(this, 185, 250, 60, 25, "SteelBlue"));
-    //this.enemies.push(new Enemies(this, 255, 250, 60, 25, "DarkCyan"));
+    this.enemies.push(new Enemies(this, 10, 100, 60, 25, "SteelBlue"));
+    this.enemies.push(new Enemies(this, 80, 100, 60, 25, "DarkCyan"));
+    this.enemies.push(new Enemies(this, 150, 100, 60, 25, "SteelBlue"));
+    this.enemies.push(new Enemies(this, 220, 100, 60, 25, "DarkCyan"));
+    this.enemies.push(new Enemies(this, 290, 100, 60, 25, "SteelBlue"));
+    this.enemies.push(new Enemies(this, 360, 100, 60, 25, "DarkCyan"));
+    this.enemies.push(new Enemies(this, 430, 100, 60, 25, "SteelBlue"));
+
+    this.enemies.push(new Enemies(this, 45, 150, 60, 25, "SlateGray"));
+    this.enemies.push(new Enemies(this, 45, 150, 60, 25, "SlateGray"));
+    this.enemies.push(new Enemies(this, 115, 150, 60, 25, "DarkCyan"));
+    this.enemies.push(new Enemies(this, 185, 150, 60, 25, "SteelBlue"));
+    this.enemies.push(new Enemies(this, 255, 150, 60, 25, "DarkCyan"));
+    this.enemies.push(new Enemies(this, 325, 150, 60, 25, "SteelBlue"));
+    this.enemies.push(new Enemies(this, 395, 150, 60, 25, "SlateGray"));
+    this.enemies.push(new Enemies(this, 395, 150, 60, 25, "SlateGray"));
+
+    this.enemies.push(new Enemies(this, 10, 200, 60, 25, "SteelBlue"));
+    this.enemies.push(new Enemies(this, 80, 200, 60, 25, "DarkCyan"));
+    this.enemies.push(new Enemies(this, 150, 200, 60, 25, "SteelBlue"));
+    this.enemies.push(new Enemies(this, 220, 200, 60, 25, "DarkCyan"));
+    this.enemies.push(new Enemies(this, 290, 200, 60, 25, "SteelBlue"));
+    this.enemies.push(new Enemies(this, 360, 200, 60, 25, "DarkCyan"));
+    this.enemies.push(new Enemies(this, 430, 200, 60, 25, "SteelBlue"));
+
+    this.enemies.push(new Enemies(this, 45, 250, 60, 25, "SlateGray"));
+    this.enemies.push(new Enemies(this, 45, 250, 60, 25, "SlateGray"));
+    this.enemies.push(new Enemies(this, 115, 250, 60, 25, "DarkCyan"));
+    this.enemies.push(new Enemies(this, 185, 250, 60, 25, "SteelBlue"));
+    this.enemies.push(new Enemies(this, 255, 250, 60, 25, "DarkCyan"));
     this.enemies.push(new Enemies(this, 325, 250, 60, 25, "SteelBlue"));
-    // this.enemies.push(new Enemies(this, 395, 250, 60, 25, "SlateGray"));
-    // this.enemies.push(new Enemies(this, 395, 250, 60, 25, "SlateGray"));
-    // this.enemies.push(new Enemies(this, 150, 350, 60, 25, "SlateGray"));
-    // this.enemies.push(new Enemies(this, 150, 350, 60, 25, "SlateGray"));
-    // this.enemies.push(new Enemies(this, 250, 350, 60, 25, "SlateGray"));
-    // this.enemies.push(new Enemies(this, 250, 350, 60, 25, "SlateGray"));
+    this.enemies.push(new Enemies(this, 395, 250, 60, 25, "SlateGray"));
+    this.enemies.push(new Enemies(this, 395, 250, 60, 25, "SlateGray"));
+
+    this.enemies.push(new Enemies(this, 150, 350, 60, 25, "SlateGray"));
+    this.enemies.push(new Enemies(this, 150, 350, 60, 25, "SlateGray"));
+    this.enemies.push(new Enemies(this, 250, 350, 60, 25, "SlateGray"));
+    this.enemies.push(new Enemies(this, 250, 350, 60, 25, "SlateGray"));
   }
 
   multipleEnemies2() {
@@ -145,26 +167,20 @@ class Game {
     this.enemies.push(new Enemies(this, 10, 150, 60, 25, "green"));
     this.enemies.push(new Enemies(this, 10, 200, 60, 25, "blue"));
     this.enemies.push(new Enemies(this, 10, 250, 60, 25, "blue"));
+
     this.enemies.push(new Enemies(this, 80, 100, 60, 25, "blue"));
     this.enemies.push(new Enemies(this, 80, 150, 60, 25, "blue"));
     this.enemies.push(new Enemies(this, 80, 200, 60, 25, "blue"));
     this.enemies.push(new Enemies(this, 80, 250, 60, 25, "blue"));
 
-    // this.enemies.push(new Enemies(this, 10, 150, 60, 25, "grey"));
-    // this.enemies.push(new Enemies(this, 80, 150, 60, 25, "grey"));
-    // this.enemies.push(new Enemies(this, 1, 150, 60, 25, "green"));
-    // this.enemies.push(new Enemies(this, 185, 150, 60, 25, "blue"));
-    // this.enemies.push(new Enemies(this, 255, 150, 60, 25, "green"));
-    // this.enemies.push(new Enemies(this, 325, 150, 60, 25, "blue"));
-    // this.enemies.push(new Enemies(this, 395, 150, 60, 25, "grey"));
-    // this.enemies.push(new Enemies(this, 395, 150, 60, 25, "grey"));
-    // this.enemies.push(new Enemies(this, 10, 200, 60, 25, "blue"));
-    // this.enemies.push(new Enemies(this, 80, 200, 60, 25, "green"));
-    // this.enemies.push(new Enemies(this, 150, 200, 60, 25, "blue"));
-    // this.enemies.push(new Enemies(this, 220, 200, 60, 25, "green"));
-    // this.enemies.push(new Enemies(this, 290, 200, 60, 25, "blue"));
-    // this.enemies.push(new Enemies(this, 360, 200, 60, 25, "green"));
-    // this.enemies.push(new Enemies(this, 430, 200, 60, 25, "blue"));
+    this.enemies.push(new Enemies(this, 150, 150, 60, 25, "blue"));
+    this.enemies.push(new Enemies(this, 150, 200, 60, 25, "blue"));
+    this.enemies.push(new Enemies(this, 150, 250, 60, 25, "blue"));
+
+    this.enemies.push(new Enemies(this, 220, 200, 60, 25, "blue"));
+    this.enemies.push(new Enemies(this, 220, 250, 60, 25, "blue"));
+
+    this.enemies.push(new Enemies(this, 290, 250, 60, 25, "blue"));
 
     this.enemies.push(new Enemies(this, 10, 300, 60, 25, "grey"));
     this.enemies.push(new Enemies(this, 10, 300, 60, 25, "grey"));
@@ -178,9 +194,227 @@ class Game {
     this.enemies.push(new Enemies(this, 290, 300, 60, 25, "grey"));
     this.enemies.push(new Enemies(this, 360, 300, 60, 25, "grey"));
     this.enemies.push(new Enemies(this, 360, 300, 60, 25, "grey"));
-    this.enemies.push(new Enemies(this, 360, 300, 60, 25, "grey"));
+    this.enemies.push(new Enemies(this, 360, 300, 60, 25, "green"));
     this.enemies.push(new Enemies(this, 430, 300, 60, 25, "red"));
   }
+
+  multipleEnemies3() {
+    this.enemies.push(new Enemies(this, 10, 50, 60, 25, "blue"));
+    this.enemies.push(new Enemies(this, 430, 50, 60, 25, "blue"));
+
+    this.enemies.push(new Enemies(this, 80, 100, 60, 25, "blue"));
+    this.enemies.push(new Enemies(this, 360, 100, 60, 25, "blue"));
+
+    this.enemies.push(new Enemies(this, 150, 150, 60, 25, "blue"));
+    this.enemies.push(new Enemies(this, 290, 150, 60, 25, "blue"));
+
+    this.enemies.push(new Enemies(this, 220, 200, 60, 25, "blue"));
+
+    this.enemies.push(new Enemies(this, 290, 250, 60, 25, "blue"));
+    this.enemies.push(new Enemies(this, 150, 250, 60, 25, "blue"));
+
+    this.enemies.push(new Enemies(this, 360, 300, 60, 25, "yellow"));
+    this.enemies.push(new Enemies(this, 80, 300, 60, 25, "grey"));
+
+    this.enemies.push(new Enemies(this, 430, 350, 60, 25, "red"));
+    this.enemies.push(new Enemies(this, 10, 350, 60, 25, "red"));
+  }
+
+  multipleEnemies4() {
+    this.enemies.push(new Enemies(this, 10, 100, 60, 25, "blue"));
+    this.enemies.push(new Enemies(this, 80, 100, 60, 25, "blue"));
+    this.enemies.push(new Enemies(this, 10, 150, 60, 25, "SlateGray"));
+    this.enemies.push(new Enemies(this, 80, 150, 60, 25, "SlateGray"));
+
+    this.enemies.push(new Enemies(this, 10, 250, 60, 25, "SteelBlue"));
+    this.enemies.push(new Enemies(this, 80, 250, 60, 25, "DarkCyan"));
+    this.enemies.push(new Enemies(this, 10, 300, 60, 25, "SteelBlue"));
+    this.enemies.push(new Enemies(this, 80, 300, 60, 25, "DarkCyan"));
+
+    this.enemies.push(new Enemies(this, 430, 100, 60, 25, "blue"));
+    this.enemies.push(new Enemies(this, 360, 100, 60, 25, "blue"));
+    this.enemies.push(new Enemies(this, 430, 150, 60, 25, "blue"));
+    this.enemies.push(new Enemies(this, 360, 150, 60, 25, "blue"));
+
+    this.enemies.push(new Enemies(this, 430, 250, 60, 25, "green"));
+    this.enemies.push(new Enemies(this, 360, 250, 60, 25, "green"));
+    this.enemies.push(new Enemies(this, 430, 300, 60, 25, "green"));
+    this.enemies.push(new Enemies(this, 360, 300, 60, 25, "green"));
+
+    this.enemies.push(new Enemies(this, 220, 100, 60, 25, "green"));
+    this.enemies.push(new Enemies(this, 220, 150, 60, 25, "green"));
+    this.enemies.push(new Enemies(this, 220, 200, 60, 25, "green"));
+    this.enemies.push(new Enemies(this, 220, 250, 60, 25, "green"));
+    this.enemies.push(new Enemies(this, 220, 300, 60, 25, "green"));
+  }
+
+  // multipleEnemies5() {
+  //   // this.enemies.push(new Enemies(this, 10, 100, 60, 25, "blue"));
+  //   // this.enemies.push(new Enemies(this, 80, 100, 60, 25, "blue"));
+  //   // this.enemies.push(new Enemies(this, 10, 150, 60, 25, "SlateGray"));
+  //   // this.enemies.push(new Enemies(this, 80, 150, 60, 25, "SlateGray"));
+
+  //   // this.enemies.push(new Enemies(this, 10, 250, 60, 25, "SteelBlue"));
+  //   // this.enemies.push(new Enemies(this, 80, 250, 60, 25, "DarkCyan"));
+  //   // this.enemies.push(new Enemies(this, 10, 300, 60, 25, "SteelBlue"));
+  //   // this.enemies.push(new Enemies(this, 80, 300, 60, 25, "DarkCyan"));
+
+  //   // this.enemies.push(new Enemies(this, 430, 100, 60, 25, "blue"));
+  //   // this.enemies.push(new Enemies(this, 360, 100, 60, 25, "blue"));
+  //   // this.enemies.push(new Enemies(this, 430, 150, 60, 25, "blue"));
+  //   // this.enemies.push(new Enemies(this, 360, 150, 60, 25, "blue"));
+
+  //   // this.enemies.push(new Enemies(this, 430, 250, 60, 25, "green"));
+  //   // this.enemies.push(new Enemies(this, 360, 250, 60, 25, "green"));
+  //   // this.enemies.push(new Enemies(this, 430, 300, 60, 25, "green"));
+  //   this.enemies.push(new Enemies(this, 360, 300, 60, 25, "green"));
+
+  //   // this.enemies.push(new Enemies(this, 220, 100, 60, 25, "green"));
+  //   // this.enemies.push(new Enemies(this, 220, 150, 60, 25, "green"));
+  //   // this.enemies.push(new Enemies(this, 220, 200, 60, 25, "green"));
+  //   // this.enemies.push(new Enemies(this, 220, 250, 60, 25, "green"));
+  //   // this.enemies.push(new Enemies(this, 220, 300, 60, 25, "green"));
+  // }
+
+  // multipleEnemies6() {
+  //   // this.enemies.push(new Enemies(this, 10, 100, 60, 25, "blue"));
+  //   // this.enemies.push(new Enemies(this, 80, 100, 60, 25, "blue"));
+  //   // this.enemies.push(new Enemies(this, 10, 150, 60, 25, "SlateGray"));
+  //   // this.enemies.push(new Enemies(this, 80, 150, 60, 25, "SlateGray"));
+
+  //   // this.enemies.push(new Enemies(this, 10, 250, 60, 25, "SteelBlue"));
+  //   // this.enemies.push(new Enemies(this, 80, 250, 60, 25, "DarkCyan"));
+  //   // this.enemies.push(new Enemies(this, 10, 300, 60, 25, "SteelBlue"));
+  //   // this.enemies.push(new Enemies(this, 80, 300, 60, 25, "DarkCyan"));
+
+  //   // this.enemies.push(new Enemies(this, 430, 100, 60, 25, "blue"));
+  //   // this.enemies.push(new Enemies(this, 360, 100, 60, 25, "blue"));
+  //   // this.enemies.push(new Enemies(this, 430, 150, 60, 25, "blue"));
+  //   // this.enemies.push(new Enemies(this, 360, 150, 60, 25, "blue"));
+
+  //   // this.enemies.push(new Enemies(this, 430, 250, 60, 25, "green"));
+  //   // this.enemies.push(new Enemies(this, 360, 250, 60, 25, "green"));
+  //   // this.enemies.push(new Enemies(this, 430, 300, 60, 25, "green"));
+  //   this.enemies.push(new Enemies(this, 360, 300, 60, 25, "green"));
+
+  //   // this.enemies.push(new Enemies(this, 220, 100, 60, 25, "green"));
+  //   // this.enemies.push(new Enemies(this, 220, 150, 60, 25, "green"));
+  //   // this.enemies.push(new Enemies(this, 220, 200, 60, 25, "green"));
+  //   // this.enemies.push(new Enemies(this, 220, 250, 60, 25, "green"));
+  //   // this.enemies.push(new Enemies(this, 220, 300, 60, 25, "green"));
+  // }
+
+  // multipleEnemies7() {
+  //   // this.enemies.push(new Enemies(this, 10, 100, 60, 25, "blue"));
+  //   // this.enemies.push(new Enemies(this, 80, 100, 60, 25, "blue"));
+  //   // this.enemies.push(new Enemies(this, 10, 150, 60, 25, "SlateGray"));
+  //   // this.enemies.push(new Enemies(this, 80, 150, 60, 25, "SlateGray"));
+
+  //   // this.enemies.push(new Enemies(this, 10, 250, 60, 25, "SteelBlue"));
+  //   // this.enemies.push(new Enemies(this, 80, 250, 60, 25, "DarkCyan"));
+  //   // this.enemies.push(new Enemies(this, 10, 300, 60, 25, "SteelBlue"));
+  //   // this.enemies.push(new Enemies(this, 80, 300, 60, 25, "DarkCyan"));
+
+  //   // this.enemies.push(new Enemies(this, 430, 100, 60, 25, "blue"));
+  //   // this.enemies.push(new Enemies(this, 360, 100, 60, 25, "blue"));
+  //   // this.enemies.push(new Enemies(this, 430, 150, 60, 25, "blue"));
+  //   // this.enemies.push(new Enemies(this, 360, 150, 60, 25, "blue"));
+
+  //   // this.enemies.push(new Enemies(this, 430, 250, 60, 25, "green"));
+  //   // this.enemies.push(new Enemies(this, 360, 250, 60, 25, "green"));
+  //   // this.enemies.push(new Enemies(this, 430, 300, 60, 25, "green"));
+  //   this.enemies.push(new Enemies(this, 360, 300, 60, 25, "green"));
+
+  //   // this.enemies.push(new Enemies(this, 220, 100, 60, 25, "green"));
+  //   // this.enemies.push(new Enemies(this, 220, 150, 60, 25, "green"));
+  //   // this.enemies.push(new Enemies(this, 220, 200, 60, 25, "green"));
+  //   // this.enemies.push(new Enemies(this, 220, 250, 60, 25, "green"));
+  //   // this.enemies.push(new Enemies(this, 220, 300, 60, 25, "green"));
+  // }
+
+  // multipleEnemies8() {
+  //   // this.enemies.push(new Enemies(this, 10, 100, 60, 25, "blue"));
+  //   // this.enemies.push(new Enemies(this, 80, 100, 60, 25, "blue"));
+  //   // this.enemies.push(new Enemies(this, 10, 150, 60, 25, "SlateGray"));
+  //   // this.enemies.push(new Enemies(this, 80, 150, 60, 25, "SlateGray"));
+
+  //   // this.enemies.push(new Enemies(this, 10, 250, 60, 25, "SteelBlue"));
+  //   // this.enemies.push(new Enemies(this, 80, 250, 60, 25, "DarkCyan"));
+  //   // this.enemies.push(new Enemies(this, 10, 300, 60, 25, "SteelBlue"));
+  //   // this.enemies.push(new Enemies(this, 80, 300, 60, 25, "DarkCyan"));
+
+  //   // this.enemies.push(new Enemies(this, 430, 100, 60, 25, "blue"));
+  //   // this.enemies.push(new Enemies(this, 360, 100, 60, 25, "blue"));
+  //   // this.enemies.push(new Enemies(this, 430, 150, 60, 25, "blue"));
+  //   // this.enemies.push(new Enemies(this, 360, 150, 60, 25, "blue"));
+
+  //   // this.enemies.push(new Enemies(this, 430, 250, 60, 25, "green"));
+  //   // this.enemies.push(new Enemies(this, 360, 250, 60, 25, "green"));
+  //   // this.enemies.push(new Enemies(this, 430, 300, 60, 25, "green"));
+  //   this.enemies.push(new Enemies(this, 360, 300, 60, 25, "green"));
+
+  //   // this.enemies.push(new Enemies(this, 220, 100, 60, 25, "green"));
+  //   // this.enemies.push(new Enemies(this, 220, 150, 60, 25, "green"));
+  //   // this.enemies.push(new Enemies(this, 220, 200, 60, 25, "green"));
+  //   // this.enemies.push(new Enemies(this, 220, 250, 60, 25, "green"));
+  //   // this.enemies.push(new Enemies(this, 220, 300, 60, 25, "green"));
+  // }
+
+  // multipleEnemies9() {
+  //   // this.enemies.push(new Enemies(this, 10, 100, 60, 25, "blue"));
+  //   // this.enemies.push(new Enemies(this, 80, 100, 60, 25, "blue"));
+  //   // this.enemies.push(new Enemies(this, 10, 150, 60, 25, "SlateGray"));
+  //   // this.enemies.push(new Enemies(this, 80, 150, 60, 25, "SlateGray"));
+
+  //   // this.enemies.push(new Enemies(this, 10, 250, 60, 25, "SteelBlue"));
+  //   // this.enemies.push(new Enemies(this, 80, 250, 60, 25, "DarkCyan"));
+  //   // this.enemies.push(new Enemies(this, 10, 300, 60, 25, "SteelBlue"));
+  //   // this.enemies.push(new Enemies(this, 80, 300, 60, 25, "DarkCyan"));
+
+  //   // this.enemies.push(new Enemies(this, 430, 100, 60, 25, "blue"));
+  //   // this.enemies.push(new Enemies(this, 360, 100, 60, 25, "blue"));
+  //   // this.enemies.push(new Enemies(this, 430, 150, 60, 25, "blue"));
+  //   // this.enemies.push(new Enemies(this, 360, 150, 60, 25, "blue"));
+
+  //   // this.enemies.push(new Enemies(this, 430, 250, 60, 25, "green"));
+  //   // this.enemies.push(new Enemies(this, 360, 250, 60, 25, "green"));
+  //   // this.enemies.push(new Enemies(this, 430, 300, 60, 25, "green"));
+  //   this.enemies.push(new Enemies(this, 360, 300, 60, 25, "green"));
+
+  //   // this.enemies.push(new Enemies(this, 220, 100, 60, 25, "green"));
+  //   // this.enemies.push(new Enemies(this, 220, 150, 60, 25, "green"));
+  //   // this.enemies.push(new Enemies(this, 220, 200, 60, 25, "green"));
+  //   // this.enemies.push(new Enemies(this, 220, 250, 60, 25, "green"));
+  //   // this.enemies.push(new Enemies(this, 220, 300, 60, 25, "green"));
+  // }
+
+  // multipleEnemies10() {
+  //   // this.enemies.push(new Enemies(this, 10, 100, 60, 25, "blue"));
+  //   // this.enemies.push(new Enemies(this, 80, 100, 60, 25, "blue"));
+  //   // this.enemies.push(new Enemies(this, 10, 150, 60, 25, "SlateGray"));
+  //   // this.enemies.push(new Enemies(this, 80, 150, 60, 25, "SlateGray"));
+
+  //   // this.enemies.push(new Enemies(this, 10, 250, 60, 25, "SteelBlue"));
+  //   // this.enemies.push(new Enemies(this, 80, 250, 60, 25, "DarkCyan"));
+  //   // this.enemies.push(new Enemies(this, 10, 300, 60, 25, "SteelBlue"));
+  //   // this.enemies.push(new Enemies(this, 80, 300, 60, 25, "DarkCyan"));
+
+  //   // this.enemies.push(new Enemies(this, 430, 100, 60, 25, "blue"));
+  //   // this.enemies.push(new Enemies(this, 360, 100, 60, 25, "blue"));
+  //   // this.enemies.push(new Enemies(this, 430, 150, 60, 25, "blue"));
+  //   // this.enemies.push(new Enemies(this, 360, 150, 60, 25, "blue"));
+
+  //   // this.enemies.push(new Enemies(this, 430, 250, 60, 25, "green"));
+  //   // this.enemies.push(new Enemies(this, 360, 250, 60, 25, "green"));
+  //   // this.enemies.push(new Enemies(this, 430, 300, 60, 25, "green"));
+  //   this.enemies.push(new Enemies(this, 360, 300, 60, 25, "green"));
+
+  //   // this.enemies.push(new Enemies(this, 220, 100, 60, 25, "green"));
+  //   // this.enemies.push(new Enemies(this, 220, 150, 60, 25, "green"));
+  //   // this.enemies.push(new Enemies(this, 220, 200, 60, 25, "green"));
+  //   // this.enemies.push(new Enemies(this, 220, 250, 60, 25, "green"));
+  //   // this.enemies.push(new Enemies(this, 220, 300, 60, 25, "green"));
+  // }
 
   enemyCollision() {
     const ballHitsEnemy = (enemy) =>
@@ -191,6 +425,7 @@ class Game {
 
     this.enemies.forEach((enemy, i) => {
       if (ballHitsEnemy(enemy)) {
+        this.playerSound.play();
         this.ball.vy = -this.ball.vy;
         this.score += 10;
         this.enemies.splice([i], 1);
@@ -216,20 +451,6 @@ class Game {
     this.ctx.fillText(`Level: ${this.level}`, 350, 30);
   }
 
-  // drawStart() {
-  //   if (this.startGame()) {
-  //     this.ctx.font = "20px 'Press Start 2P', cursive";
-  //     this.ctx.fillStyle = "black";
-  //     this.ctx.fillText(`Get ready!`, 35, 300);
-  //   }
-  // }
-
-  // drawEnemies2() {
-  //   if (this.level === 2) {
-  //     this.multipleEnemies2();
-  //   }
-  // }
-
   resetBallPaddle() {
     this.ball.x = 250;
     this.ball.y = 552;
@@ -237,7 +458,7 @@ class Game {
   }
 
   checkNextLevel() {
-    if (this.enemies.length === 0 && this.level < 3) {
+    if (this.enemies.length === 0 && this.level < 5) {
       this.nextLevel();
     }
   }
@@ -252,7 +473,7 @@ class Game {
   }
 
   checkWin() {
-    if (this.level === 3) {
+    if (this.level === 5) {
       this.background.src = "docs/assets/imgs/space.jpeg";
       this.ctx.drawImage(
         this.background,
@@ -284,7 +505,7 @@ class Game {
     this.ctx.fillStyle = "white";
     this.ctx.fillText("YOU LOST", 165, 150);
     this.ctx.fillText("CLICK 'START GAME'", 75, 300);
-    this.ctx.fillText("TO PLAY AGAIN", 120, 350);
+    this.ctx.fillText("TO TRY AGAIN", 130, 350);
     clearInterval(this.IntervalId);
     this.isRunning = false;
   }
