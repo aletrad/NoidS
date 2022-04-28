@@ -17,6 +17,11 @@ class Game {
     this.score = 0;
     this.level = 1;
     this.isRunning = false;
+    this.playerSound = new Audio("docs/assets/sounds/nutfall.flac");
+    this.over = new Audio("docs/assets/sounds/horror.wav");
+    this.death = new Audio("docs/assets/sounds/death.wav");
+    this.round = new Audio("docs/assets/sounds/round.wav");
+    this.win = new Audio("docs/assets/sounds/win.ogg");
   }
 
   start() {
@@ -287,6 +292,8 @@ class Game {
 
     this.enemies.forEach((enemy, i) => {
       if (ballHitsEnemy(enemy)) {
+        this.playerSound.currentTime = 0;
+        this.playerSound.play();
         this.ball.vy = -this.ball.vy;
         this.score += 10;
         this.enemies.splice([i], 1);
@@ -325,6 +332,10 @@ class Game {
   }
 
   nextLevel() {
+    if (this.level < 5) {
+      this.round.play();
+      this.round.volume = 0.1;
+    }
     this.level += 1;
     this.ctx.font = "20px 'Press Start 2P', cursive";
     this.ctx.fillStyle = "white";
@@ -335,6 +346,7 @@ class Game {
 
   checkWin() {
     if (this.level === 6) {
+      this.win.play();
       this.background.src = "docs/assets/imgs/space.jpeg";
       this.ctx.drawImage(
         this.background,
@@ -354,6 +366,8 @@ class Game {
   }
 
   gameOver() {
+    this.over.play();
+    this.over.volume = 0.4;
     this.background.src = "docs/assets/imgs/space.jpeg";
     this.ctx.drawImage(
       this.background,
@@ -373,6 +387,8 @@ class Game {
 
   livesRemaining() {
     if (this.ball.y > this.canvas.height) {
+      this.death.play();
+      this.death.volume = 0.4;
       this.lives -= 1;
       if (this.lives === 0) {
         this.gameOver();
