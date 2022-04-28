@@ -22,16 +22,12 @@ body {
 }
 
 .menu p {
-  font-size: 18px;
+  font-size: 26px;
 }
 
 .logo-img {
   width: 550px;
   margin: -100px 0;
-}
-
-.arrows-img {
-  width: 150px;
 }
 
 .start {
