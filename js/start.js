@@ -1,28 +1,12 @@
-// window.onload = () => {
-// };
+let game = null;
 
 document.getElementById("start-button").onclick = () => {
-  setTimeout(() => {
-    startGame();
-  }, 3000);
+  startGame();
 };
 
-//   // window.addEventListener("keydown", (e) => {
-//   //   switch (e.code) {
-//   //     case "Space":
-//   //       startGame();
-//   //   }
-
 function startGame() {
-  const game = new Game();
-  game.start();
-  // ctx.font = "20px 'Press Start 2P', cursive";
-  // ctx.fillStyle = "black";
-  // ctx.fillText(`Get ready!`, 35, 300);
+  if (!game || !game.isRunning) {
+    game = new Game();
+    game.start();
+  }
 }
-
-// function drawStart() {
-//   this.ctx.font = "20px 'Press Start 2P', cursive";
-//   this.ctx.fillStyle = "black";
-//   this.ctx.fillText(`Get ready!`, 35, 300);
-// }
