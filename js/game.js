@@ -17,10 +17,10 @@ class Game {
     this.score = 0;
     this.level = 1;
     this.isRunning = false;
-    this.playerSound = new Audio("docs/assets/sounds/nutfall.flac");
-    this.over = new Audio("docs/assets/sounds/horror.wav");
-    this.death = new Audio("docs/assets/sounds/death.wav");
-    this.round = new Audio("docs/assets/sounds/round.wav");
+    //this.playerSound = new Audio("docs/assets/sounds/nutfall.flac");
+    // this.over = new Audio("docs/assets/sounds/horror.wav");
+    //this.death = new Audio("docs/assets/sounds/death.wav");
+    //this.round = new Audio("docs/assets/sounds/round.wav");
     //this.win = new Audio("docs/assets/sounds/win.ogg");
   }
 
